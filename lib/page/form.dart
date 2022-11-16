@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_const
 
 import 'package:tutorial/main.dart';
+import 'package:tutorial/page/to_do_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -53,6 +54,16 @@ class _MyFormPageState extends State<MyFormPage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyFormPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('To Do'),
+              onTap: () {
+                // Route menu ke halaman to do
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
                 );
               },
             ),
@@ -267,7 +278,7 @@ class _MyFormPageState extends State<MyFormPage> {
                                         const SizedBox(height: 10),
                                         if (_nilaiSwitch) ...[
                                           const Text('Practice Mode'),
-                                        ] else ... [
+                                        ] else ...[
                                           const Text('Not In Practice Mode'),
                                         ],
                                         const SizedBox(height: 20),
